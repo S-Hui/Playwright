@@ -1,0 +1,777 @@
+### Page state
+- Page URL: https://96376218-17-0-all.runbot203.odoo.com/web#action=1157&model=purchase.order&view_type=list&cids=1&menu_id=786
+- Page Title: Odoo - Requests for Quotation
+- Page Snapshot:
+```yaml
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e3]:
+      - link "Home menu" [ref=e4] [cursor=pointer]:
+        - /url: "#"
+        - img
+        - generic [ref=e5]: Purchase
+      - menu [ref=e6]:
+        - button "Orders" [ref=e8] [cursor=pointer]:
+          - generic [ref=e9]: Orders
+        - button "Products" [ref=e11] [cursor=pointer]:
+          - generic [ref=e12]: Products
+        - button "Reporting" [ref=e14] [cursor=pointer]:
+          - generic [ref=e15]: Reporting
+        - button "Configuration" [ref=e17] [cursor=pointer]:
+          - generic [ref=e18]: Configuration
+      - menu [ref=e19]:
+        - button "Attendance" [ref=e21] [cursor=pointer]:
+          - img "Attendance" [ref=e22]: 
+        - button "" [ref=e24] [cursor=pointer]:
+          - generic [ref=e25]: 
+        - button "Messages 11" [ref=e27] [cursor=pointer]:
+          - img "Messages" [ref=e28]: 
+          - generic [ref=e29]: "11"
+        - button "Activities 41" [ref=e31] [cursor=pointer]:
+          - img "Activities" [ref=e32]: 
+          - generic [ref=e33]: "41"
+        - button "Toggle Studio" [ref=e35] [cursor=pointer]:
+          - img [ref=e36]: 
+        - button "" [ref=e38] [cursor=pointer]:
+          - generic [ref=e39]: 
+        - generic: 
+        - button "User" [ref=e41] [cursor=pointer]:
+          - img "User" [ref=e42]
+          - text: 
+  - generic [ref=e44]:
+    - generic [ref=e46]:
+      - generic [ref=e47]:
+        - button "New" [ref=e50] [cursor=pointer]
+        - generic [ref=e51]:
+          - generic [ref=e53]: Requests for Quotation
+          - button "" [ref=e57] [cursor=pointer]:
+            - generic [ref=e58]: 
+      - search [ref=e60]:
+        - search [ref=e61]:
+          - img "Search..." [ref=e62]: 
+          - searchbox "Search..." [active] [ref=e64]
+        - button [ref=e66] [cursor=pointer]:
+          - generic [ref=e67]: 
+      - generic [ref=e68]:
+        - search [ref=e69]:
+          - navigation "Pager" [ref=e70]:
+            - generic [ref=e71]:
+              - generic [ref=e72]: 1-24
+              - text: / 24
+            - generic [ref=e73]:
+              - button "Previous" [disabled]:
+                - generic: 
+              - button "Next" [disabled]:
+                - generic: 
+        - button "" [ref=e75] [cursor=pointer]:
+          - generic [ref=e76]: 
+        - text:      
+    - generic [ref=e77]:
+      - generic [ref=e79]:
+        - generic [ref=e80]:
+          - generic [ref=e81]:
+            - generic [ref=e82]: All RFQs
+            - generic [ref=e83]:
+              - generic "All Draft RFQs" [ref=e84]:
+                - link "9 To Send" [ref=e85] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=e86]: "9"
+                  - text: To Send
+              - generic "All Waiting RFQs" [ref=e87]:
+                - link "0 Waiting" [ref=e88] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=e89]: "0"
+                  - text: Waiting
+              - generic "All Late RFQs" [ref=e90]:
+                - link "10 Late" [ref=e91] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=e92]: "10"
+                  - text: Late
+          - generic [ref=e93]:
+            - generic [ref=e94]: My RFQs
+            - generic [ref=e95]:
+              - generic "My Draft RFQs" [ref=e96]:
+                - link "9" [ref=e97] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=e98]: "9"
+              - generic "My Waiting RFQs" [ref=e99]:
+                - link "0" [ref=e100] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=e101]: "0"
+              - generic "My Late RFQs" [ref=e102]:
+                - link "10" [ref=e103] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=e104]: "10"
+        - generic [ref=e106]:
+          - generic [ref=e107]:
+            - generic [ref=e108]:
+              - generic [ref=e109]: Avg Order Value
+              - generic [ref=e111]: $ 3,950.50
+            - generic [ref=e112]:
+              - generic [ref=e113]: Purchased Last 7 Days
+              - generic [ref=e115]: $ 44,933.40
+          - generic [ref=e116]:
+            - generic [ref=e117]:
+              - generic [ref=e118]: Lead Time to Purchase
+              - generic [ref=e120]: 2.15 Days
+            - generic [ref=e121]:
+              - generic [ref=e122]: RFQs Sent Last 7 Days
+              - generic [ref=e124]: "0"
+      - table [ref=e126]:
+        - rowgroup [ref=e127]:
+          - row "Reference  Vendor  Company  Buyer  Order Deadline  Activities Source Document  Total  Status  " [ref=e128]:
+            - columnheader [ref=e129] [cursor=pointer]:
+              - checkbox [ref=e131]
+            - columnheader [ref=e132]
+            - columnheader [ref=e133]
+            - columnheader "Reference " [ref=e134] [cursor=pointer]:
+              - generic [ref=e135]:
+                - generic [ref=e136]: Reference
+                - generic [ref=e137]: 
+            - columnheader "Vendor " [ref=e139] [cursor=pointer]:
+              - generic [ref=e140]:
+                - generic [ref=e141]: Vendor
+                - generic [ref=e142]: 
+            - columnheader "Company " [ref=e144] [cursor=pointer]:
+              - generic [ref=e145]:
+                - generic [ref=e146]: Company
+                - generic [ref=e147]: 
+            - columnheader "Buyer " [ref=e149] [cursor=pointer]:
+              - generic [ref=e150]:
+                - generic [ref=e151]: Buyer
+                - generic [ref=e152]: 
+            - columnheader "Order Deadline " [ref=e154] [cursor=pointer]:
+              - generic [ref=e155]:
+                - generic [ref=e156]: Order Deadline
+                - generic [ref=e157]: 
+            - columnheader "Activities" [ref=e159]:
+              - generic [ref=e160]:
+                - generic [ref=e161]: Activities
+                - text: 
+            - columnheader "Source Document " [ref=e163] [cursor=pointer]:
+              - generic [ref=e164]:
+                - generic [ref=e165]: Source Document
+                - generic [ref=e166]: 
+            - columnheader "Total " [ref=e168] [cursor=pointer]:
+              - generic [ref=e169]:
+                - generic [ref=e170]: Total
+                - generic [ref=e171]: 
+            - columnheader "Status " [ref=e173] [cursor=pointer]:
+              - generic [ref=e174]:
+                - generic [ref=e175]: Status
+                - generic [ref=e176]: 
+            - columnheader "" [ref=e178]:
+              - button "" [ref=e180] [cursor=pointer]:
+                - generic [ref=e181]: 
+        - rowgroup [ref=e182]:
+          - row "Priority P00024 Deco Addict My Company (San Francisco) Mitchell Admin Show activities $ 500.00 Purchase Order" [ref=e183]:
+            - cell [ref=e184]:
+              - checkbox [ref=e186] [cursor=pointer]
+            - cell "Priority" [ref=e187] [cursor=pointer]:
+              - radiogroup "Priority" [ref=e189]:
+                - radio "Urgent" [ref=e190]: 
+            - cell [ref=e191] [cursor=pointer]
+            - cell "P00024" [ref=e192] [cursor=pointer]
+            - cell "Deco Addict" [ref=e193] [cursor=pointer]
+            - cell "My Company (San Francisco)" [ref=e194] [cursor=pointer]
+            - cell "Mitchell Admin" [ref=e195] [cursor=pointer]:
+              - generic [ref=e197]:
+                - img [ref=e199]
+                - generic [ref=e200]: Mitchell Admin
+            - cell [ref=e201] [cursor=pointer]
+            - cell "Show activities" [ref=e202] [cursor=pointer]:
+              - button "Show activities" [ref=e204]:
+                - img [ref=e205]: 
+            - cell [ref=e206] [cursor=pointer]
+            - cell "$ 500.00" [ref=e207] [cursor=pointer]:
+              - generic [ref=e208]: $ 500.00
+            - cell "Purchase Order" [ref=e209] [cursor=pointer]:
+              - generic [ref=e211]: Purchase Order
+            - cell [ref=e212]
+          - row "Priority P00023 Azure Interior My Company (San Francisco) Mitchell Admin Show activities $ 500.00 Purchase Order" [ref=e213]:
+            - cell [ref=e214]:
+              - checkbox [ref=e216] [cursor=pointer]
+            - cell "Priority" [ref=e217] [cursor=pointer]:
+              - radiogroup "Priority" [ref=e219]:
+                - radio "Urgent" [ref=e220]: 
+            - cell [ref=e221] [cursor=pointer]
+            - cell "P00023" [ref=e222] [cursor=pointer]
+            - cell "Azure Interior" [ref=e223] [cursor=pointer]
+            - cell "My Company (San Francisco)" [ref=e224] [cursor=pointer]
+            - cell "Mitchell Admin" [ref=e225] [cursor=pointer]:
+              - generic [ref=e227]:
+                - img [ref=e229]
+                - generic [ref=e230]: Mitchell Admin
+            - cell [ref=e231] [cursor=pointer]
+            - cell "Show activities" [ref=e232] [cursor=pointer]:
+              - button "Show activities" [ref=e234]:
+                - img [ref=e235]: 
+            - cell [ref=e236] [cursor=pointer]
+            - cell "$ 500.00" [ref=e237] [cursor=pointer]:
+              - generic [ref=e238]: $ 500.00
+            - cell "Purchase Order" [ref=e239] [cursor=pointer]:
+              - generic [ref=e241]: Purchase Order
+            - cell [ref=e242]
+          - row "Priority P00022 Azure Interior My Company (San Francisco) Mitchell Admin Show activities $ 11.50 Purchase Order" [ref=e243]:
+            - cell [ref=e244]:
+              - checkbox [ref=e246] [cursor=pointer]
+            - cell "Priority" [ref=e247] [cursor=pointer]:
+              - radiogroup "Priority" [ref=e249]:
+                - radio "Urgent" [ref=e250]: 
+            - cell [ref=e251] [cursor=pointer]
+            - cell "P00022" [ref=e252] [cursor=pointer]
+            - cell "Azure Interior" [ref=e253] [cursor=pointer]
+            - cell "My Company (San Francisco)" [ref=e254] [cursor=pointer]
+            - cell "Mitchell Admin" [ref=e255] [cursor=pointer]:
+              - generic [ref=e257]:
+                - img [ref=e259]
+                - generic [ref=e260]: Mitchell Admin
+            - cell [ref=e261] [cursor=pointer]
+            - cell "Show activities" [ref=e262] [cursor=pointer]:
+              - button "Show activities" [ref=e264]:
+                - img [ref=e265]: 
+            - cell [ref=e266] [cursor=pointer]
+            - cell "$ 11.50" [ref=e267] [cursor=pointer]:
+              - generic [ref=e268]: $ 11.50
+            - cell "Purchase Order" [ref=e269] [cursor=pointer]:
+              - generic [ref=e271]: Purchase Order
+            - cell [ref=e272]
+          - row "Priority P00021 Azure Interior My Company (San Francisco) Mitchell Admin Show activities $ 20,700.00 Purchase Order" [ref=e273]:
+            - cell [ref=e274]:
+              - checkbox [ref=e276] [cursor=pointer]
+            - cell "Priority" [ref=e277] [cursor=pointer]:
+              - radiogroup "Priority" [ref=e279]:
+                - radio "Urgent" [ref=e280]: 
+            - cell [ref=e281] [cursor=pointer]
+            - cell "P00021" [ref=e282] [cursor=pointer]
+            - cell "Azure Interior" [ref=e283] [cursor=pointer]
+            - cell "My Company (San Francisco)" [ref=e284] [cursor=pointer]
+            - cell "Mitchell Admin" [ref=e285] [cursor=pointer]:
+              - generic [ref=e287]:
+                - img [ref=e289]
+                - generic [ref=e290]: Mitchell Admin
+            - cell [ref=e291] [cursor=pointer]
+            - cell "Show activities" [ref=e292] [cursor=pointer]:
+              - button "Show activities" [ref=e294]:
+                - img [ref=e295]: 
+            - cell [ref=e296] [cursor=pointer]
+            - cell "$ 20,700.00" [ref=e297] [cursor=pointer]:
+              - generic [ref=e298]: $ 20,700.00
+            - cell "Purchase Order" [ref=e299] [cursor=pointer]:
+              - generic [ref=e301]: Purchase Order
+            - cell [ref=e302]
+          - row "Priority P00020 Azure Interior My Company (San Francisco) Mitchell Admin Show activities $ 103.50 Purchase Order" [ref=e303]:
+            - cell [ref=e304]:
+              - checkbox [ref=e306] [cursor=pointer]
+            - cell "Priority" [ref=e307] [cursor=pointer]:
+              - radiogroup "Priority" [ref=e309]:
+                - radio "Urgent" [ref=e310]: 
+            - cell [ref=e311] [cursor=pointer]
+            - cell "P00020" [ref=e312] [cursor=pointer]
+            - cell "Azure Interior" [ref=e313] [cursor=pointer]
+            - cell "My Company (San Francisco)" [ref=e314] [cursor=pointer]
+            - cell "Mitchell Admin" [ref=e315] [cursor=pointer]:
+              - generic [ref=e317]:
+                - img [ref=e319]
+                - generic [ref=e320]: Mitchell Admin
+            - cell [ref=e321] [cursor=pointer]
+            - cell "Show activities" [ref=e322] [cursor=pointer]:
+              - button "Show activities" [ref=e324]:
+                - img [ref=e325]: 
+            - cell [ref=e326] [cursor=pointer]
+            - cell "$ 103.50" [ref=e327] [cursor=pointer]:
+              - generic [ref=e328]: $ 103.50
+            - cell "Purchase Order" [ref=e329] [cursor=pointer]:
+              - generic [ref=e331]: Purchase Order
+            - cell [ref=e332]
+          - row "Priority P00019 Azure Interior My Company (San Francisco) Mitchell Admin Show activities $ 100.00 Purchase Order" [ref=e333]:
+            - cell [ref=e334]:
+              - checkbox [ref=e336] [cursor=pointer]
+            - cell "Priority" [ref=e337] [cursor=pointer]:
+              - radiogroup "Priority" [ref=e339]:
+                - radio "Urgent" [ref=e340]: 
+            - cell [ref=e341] [cursor=pointer]
+            - cell "P00019" [ref=e342] [cursor=pointer]
+            - cell "Azure Interior" [ref=e343] [cursor=pointer]
+            - cell "My Company (San Francisco)" [ref=e344] [cursor=pointer]
+            - cell "Mitchell Admin" [ref=e345] [cursor=pointer]:
+              - generic [ref=e347]:
+                - img [ref=e349]
+                - generic [ref=e350]: Mitchell Admin
+            - cell [ref=e351] [cursor=pointer]
+            - cell "Show activities" [ref=e352] [cursor=pointer]:
+              - button "Show activities" [ref=e354]:
+                - img [ref=e355]: 
+            - cell [ref=e356] [cursor=pointer]
+            - cell "$ 100.00" [ref=e357] [cursor=pointer]:
+              - generic [ref=e358]: $ 100.00
+            - cell "Purchase Order" [ref=e359] [cursor=pointer]:
+              - generic [ref=e361]: Purchase Order
+            - cell [ref=e362]
+          - row "Priority P00018 Wood Corner My Company (San Francisco) Send shipping detailsSend shipping details $ 46.00 Purchase Order" [ref=e363]:
+            - cell [ref=e364]:
+              - checkbox [ref=e366] [cursor=pointer]
+            - cell "Priority" [ref=e367] [cursor=pointer]:
+              - radiogroup "Priority" [ref=e369]:
+                - radio "Urgent" [ref=e370]: 
+            - cell [ref=e371] [cursor=pointer]
+            - cell "P00018" [ref=e372] [cursor=pointer]
+            - cell "Wood Corner" [ref=e373] [cursor=pointer]
+            - cell "My Company (San Francisco)" [ref=e374] [cursor=pointer]
+            - cell [ref=e375] [cursor=pointer]
+            - cell [ref=e376] [cursor=pointer]
+            - cell "Send shipping detailsSend shipping details" [ref=e377] [cursor=pointer]:
+              - generic [ref=e378]:
+                - button "Send shipping details" [ref=e379]:
+                  - img [ref=e380]: 
+                - text: Send shipping details
+            - cell [ref=e381] [cursor=pointer]
+            - cell "$ 46.00" [ref=e382] [cursor=pointer]:
+              - generic [ref=e383]: $ 46.00
+            - cell "Purchase Order" [ref=e384] [cursor=pointer]:
+              - generic [ref=e386]: Purchase Order
+            - cell [ref=e387]
+          - row "Priority P00017 Wood Corner My Company (San Francisco) Show activities $ 276.00 Purchase Order" [ref=e388]:
+            - cell [ref=e389]:
+              - checkbox [ref=e391] [cursor=pointer]
+            - cell "Priority" [ref=e392] [cursor=pointer]:
+              - radiogroup "Priority" [ref=e394]:
+                - radio "Urgent" [ref=e395]: 
+            - cell [ref=e396] [cursor=pointer]
+            - cell "P00017" [ref=e397] [cursor=pointer]
+            - cell "Wood Corner" [ref=e398] [cursor=pointer]
+            - cell "My Company (San Francisco)" [ref=e399] [cursor=pointer]
+            - cell [ref=e400] [cursor=pointer]
+            - cell [ref=e401] [cursor=pointer]
+            - cell "Show activities" [ref=e402] [cursor=pointer]:
+              - button "Show activities" [ref=e404]:
+                - img [ref=e405]: 
+            - cell [ref=e406] [cursor=pointer]
+            - cell "$ 276.00" [ref=e407] [cursor=pointer]:
+              - generic [ref=e408]: $ 276.00
+            - cell "Purchase Order" [ref=e409] [cursor=pointer]:
+              - generic [ref=e411]: Purchase Order
+            - cell [ref=e412]
+          - row "Priority P00016 YourCompany, Joel Willis My Company (San Francisco) Mitchell Admin Show activities $ 57.50 Purchase Order" [ref=e413]:
+            - cell [ref=e414]:
+              - checkbox [ref=e416] [cursor=pointer]
+            - cell "Priority" [ref=e417] [cursor=pointer]:
+              - radiogroup "Priority" [ref=e419]:
+                - radio "Urgent" [ref=e420]: 
+            - cell [ref=e421] [cursor=pointer]
+            - cell "P00016" [ref=e422] [cursor=pointer]
+            - cell "YourCompany, Joel Willis" [ref=e423] [cursor=pointer]
+            - cell "My Company (San Francisco)" [ref=e424] [cursor=pointer]
+            - cell "Mitchell Admin" [ref=e425] [cursor=pointer]:
+              - generic [ref=e427]:
+                - img [ref=e429]
+                - generic [ref=e430]: Mitchell Admin
+            - cell [ref=e431] [cursor=pointer]
+            - cell "Show activities" [ref=e432] [cursor=pointer]:
+              - button "Show activities" [ref=e434]:
+                - img [ref=e435]: 
+            - cell [ref=e436] [cursor=pointer]
+            - cell "$ 57.50" [ref=e437] [cursor=pointer]:
+              - generic [ref=e438]: $ 57.50
+            - cell "Purchase Order" [ref=e439] [cursor=pointer]:
+              - generic [ref=e441]: Purchase Order
+            - cell [ref=e442]
+          - row "Priority P00015 Ready Mat My Company (San Francisco) Mitchell Admin Show activities $ 6,596.40 Purchase Order" [ref=e443]:
+            - cell [ref=e444]:
+              - checkbox [ref=e446] [cursor=pointer]
+            - cell "Priority" [ref=e447] [cursor=pointer]:
+              - radiogroup "Priority" [ref=e449]:
+                - radio "Urgent" [ref=e450]: 
+            - cell [ref=e451] [cursor=pointer]
+            - cell "P00015" [ref=e452] [cursor=pointer]
+            - cell "Ready Mat" [ref=e453] [cursor=pointer]
+            - cell "My Company (San Francisco)" [ref=e454] [cursor=pointer]
+            - cell "Mitchell Admin" [ref=e455] [cursor=pointer]:
+              - generic [ref=e457]:
+                - img [ref=e459]
+                - generic [ref=e460]: Mitchell Admin
+            - cell [ref=e461] [cursor=pointer]
+            - cell "Show activities" [ref=e462] [cursor=pointer]:
+              - button "Show activities" [ref=e464]:
+                - img [ref=e465]: 
+            - cell [ref=e466] [cursor=pointer]
+            - cell "$ 6,596.40" [ref=e467] [cursor=pointer]:
+              - generic [ref=e468]: $ 6,596.40
+            - cell "Purchase Order" [ref=e469] [cursor=pointer]:
+              - generic [ref=e471]: Purchase Order
+            - cell [ref=e472]
+          - row "Priority  P00014 Deco Addict My Company (San Francisco) Mitchell Admin Today Show activities $ 552.00 RFQ" [ref=e473]:
+            - cell [ref=e474]:
+              - checkbox [ref=e476] [cursor=pointer]
+            - cell "Priority" [ref=e477] [cursor=pointer]:
+              - radiogroup "Priority" [ref=e479]:
+                - radio "Urgent" [ref=e480]: 
+            - cell "" [ref=e481] [cursor=pointer]:
+              - button "" [disabled]
+            - cell "P00014" [ref=e482] [cursor=pointer]
+            - cell "Deco Addict" [ref=e483] [cursor=pointer]
+            - cell "My Company (San Francisco)" [ref=e484] [cursor=pointer]
+            - cell "Mitchell Admin" [ref=e485] [cursor=pointer]:
+              - generic [ref=e487]:
+                - img [ref=e489]
+                - generic [ref=e490]: Mitchell Admin
+            - cell "Today" [ref=e491] [cursor=pointer]:
+              - generic "12/24/2025" [ref=e493]: Today
+            - cell "Show activities" [ref=e494] [cursor=pointer]:
+              - button "Show activities" [ref=e496]:
+                - img [ref=e497]: 
+            - cell [ref=e498] [cursor=pointer]
+            - cell "$ 552.00" [ref=e499] [cursor=pointer]:
+              - generic [ref=e500]: $ 552.00
+            - cell "RFQ" [ref=e501] [cursor=pointer]:
+              - generic [ref=e503]: RFQ
+            - cell [ref=e504]
+          - row "Priority  P00013 Wood Corner My Company (San Francisco) Mitchell Admin Today Show activities $ 575.00 RFQ" [ref=e505]:
+            - cell [ref=e506]:
+              - checkbox [ref=e508] [cursor=pointer]
+            - cell "Priority" [ref=e509] [cursor=pointer]:
+              - radiogroup "Priority" [ref=e511]:
+                - radio "Urgent" [ref=e512]: 
+            - cell "" [ref=e513] [cursor=pointer]:
+              - button "" [disabled]
+            - cell "P00013" [ref=e514] [cursor=pointer]
+            - cell "Wood Corner" [ref=e515] [cursor=pointer]
+            - cell "My Company (San Francisco)" [ref=e516] [cursor=pointer]
+            - cell "Mitchell Admin" [ref=e517] [cursor=pointer]:
+              - generic [ref=e519]:
+                - img [ref=e521]
+                - generic [ref=e522]: Mitchell Admin
+            - cell "Today" [ref=e523] [cursor=pointer]:
+              - generic "12/24/2025" [ref=e525]: Today
+            - cell "Show activities" [ref=e526] [cursor=pointer]:
+              - button "Show activities" [ref=e528]:
+                - img [ref=e529]: 
+            - cell [ref=e530] [cursor=pointer]
+            - cell "$ 575.00" [ref=e531] [cursor=pointer]:
+              - generic [ref=e532]: $ 575.00
+            - cell "RFQ" [ref=e533] [cursor=pointer]:
+              - generic [ref=e535]: RFQ
+            - cell [ref=e536]
+          - row "Priority P00012 Wood Corner My Company (San Francisco) Mitchell Admin Today Show activities $ 690.00 RFQ" [ref=e537]:
+            - cell [ref=e538]:
+              - checkbox [ref=e540] [cursor=pointer]
+            - cell "Priority" [ref=e541] [cursor=pointer]:
+              - radiogroup "Priority" [ref=e543]:
+                - radio "Urgent" [ref=e544]: 
+            - cell [ref=e545] [cursor=pointer]
+            - cell "P00012" [ref=e546] [cursor=pointer]
+            - cell "Wood Corner" [ref=e547] [cursor=pointer]
+            - cell "My Company (San Francisco)" [ref=e548] [cursor=pointer]
+            - cell "Mitchell Admin" [ref=e549] [cursor=pointer]:
+              - generic [ref=e551]:
+                - img [ref=e553]
+                - generic [ref=e554]: Mitchell Admin
+            - cell "Today" [ref=e555] [cursor=pointer]:
+              - generic "12/24/2025" [ref=e557]: Today
+            - cell "Show activities" [ref=e558] [cursor=pointer]:
+              - button "Show activities" [ref=e560]:
+                - img [ref=e561]: 
+            - cell [ref=e562] [cursor=pointer]
+            - cell "$ 690.00" [ref=e563] [cursor=pointer]:
+              - generic [ref=e564]: $ 690.00
+            - cell "RFQ" [ref=e565] [cursor=pointer]:
+              - generic [ref=e567]: RFQ
+            - cell [ref=e568]
+          - row "Priority P00011 Wood Corner My Company (San Francisco) Mitchell Admin Show activities $ 1,725.00 Purchase Order" [ref=e569]:
+            - cell [ref=e570]:
+              - checkbox [ref=e572] [cursor=pointer]
+            - cell "Priority" [ref=e573] [cursor=pointer]:
+              - radiogroup "Priority" [ref=e575]:
+                - radio "Urgent" [ref=e576]: 
+            - cell [ref=e577] [cursor=pointer]
+            - cell "P00011" [ref=e578] [cursor=pointer]
+            - cell "Wood Corner" [ref=e579] [cursor=pointer]
+            - cell "My Company (San Francisco)" [ref=e580] [cursor=pointer]
+            - cell "Mitchell Admin" [ref=e581] [cursor=pointer]:
+              - generic [ref=e583]:
+                - img [ref=e585]
+                - generic [ref=e586]: Mitchell Admin
+            - cell [ref=e587] [cursor=pointer]
+            - cell "Show activities" [ref=e588] [cursor=pointer]:
+              - button "Show activities" [ref=e590]:
+                - img [ref=e591]: 
+            - cell [ref=e592] [cursor=pointer]
+            - cell "$ 1,725.00" [ref=e593] [cursor=pointer]:
+              - generic [ref=e594]: $ 1,725.00
+            - cell "Purchase Order" [ref=e595] [cursor=pointer]:
+              - generic [ref=e597]: Purchase Order
+            - cell [ref=e598]
+          - row "Priority P00010 Azure Interior My Company (San Francisco) Mitchell Admin Show activities $ 2,880.75 Purchase Order" [ref=e599]:
+            - cell [ref=e600]:
+              - checkbox [ref=e602] [cursor=pointer]
+            - cell "Priority" [ref=e603] [cursor=pointer]:
+              - radiogroup "Priority" [ref=e605]:
+                - radio "Urgent" [ref=e606]: 
+            - cell [ref=e607] [cursor=pointer]
+            - cell "P00010" [ref=e608] [cursor=pointer]
+            - cell "Azure Interior" [ref=e609] [cursor=pointer]
+            - cell "My Company (San Francisco)" [ref=e610] [cursor=pointer]
+            - cell "Mitchell Admin" [ref=e611] [cursor=pointer]:
+              - generic [ref=e613]:
+                - img [ref=e615]
+                - generic [ref=e616]: Mitchell Admin
+            - cell [ref=e617] [cursor=pointer]
+            - cell "Show activities" [ref=e618] [cursor=pointer]:
+              - button "Show activities" [ref=e620]:
+                - img [ref=e621]: 
+            - cell [ref=e622] [cursor=pointer]
+            - cell "$ 2,880.75" [ref=e623] [cursor=pointer]:
+              - generic [ref=e624]: $ 2,880.75
+            - cell "Purchase Order" [ref=e625] [cursor=pointer]:
+              - generic [ref=e627]: Purchase Order
+            - cell [ref=e628]
+          - row "Priority P00009 Gemini Furniture My Company (San Francisco) Mitchell Admin Show activities $ 14,375.00 Purchase Order" [ref=e629]:
+            - cell [ref=e630]:
+              - checkbox [ref=e632] [cursor=pointer]
+            - cell "Priority" [ref=e633] [cursor=pointer]:
+              - radiogroup "Priority" [ref=e635]:
+                - radio "Urgent" [ref=e636]: 
+            - cell [ref=e637] [cursor=pointer]
+            - cell "P00009" [ref=e638] [cursor=pointer]
+            - cell "Gemini Furniture" [ref=e639] [cursor=pointer]
+            - cell "My Company (San Francisco)" [ref=e640] [cursor=pointer]
+            - cell "Mitchell Admin" [ref=e641] [cursor=pointer]:
+              - generic [ref=e643]:
+                - img [ref=e645]
+                - generic [ref=e646]: Mitchell Admin
+            - cell [ref=e647] [cursor=pointer]
+            - cell "Show activities" [ref=e648] [cursor=pointer]:
+              - button "Show activities" [ref=e650]:
+                - img [ref=e651]: 
+            - cell [ref=e652] [cursor=pointer]
+            - cell "$ 14,375.00" [ref=e653] [cursor=pointer]:
+              - generic [ref=e654]: $ 14,375.00
+            - cell "Purchase Order" [ref=e655] [cursor=pointer]:
+              - generic [ref=e657]: Purchase Order
+            - cell [ref=e658]
+          - row "Priority P00008 Wood Corner My Company (San Francisco) Mitchell Admin Show activities $ 7,435.33 Purchase Order" [ref=e659]:
+            - cell [ref=e660]:
+              - checkbox [ref=e662] [cursor=pointer]
+            - cell "Priority" [ref=e663] [cursor=pointer]:
+              - radiogroup "Priority" [ref=e665]:
+                - radio "Urgent" [ref=e666]: 
+            - cell [ref=e667] [cursor=pointer]
+            - cell "P00008" [ref=e668] [cursor=pointer]
+            - cell "Wood Corner" [ref=e669] [cursor=pointer]
+            - cell "My Company (San Francisco)" [ref=e670] [cursor=pointer]
+            - cell "Mitchell Admin" [ref=e671] [cursor=pointer]:
+              - generic [ref=e673]:
+                - img [ref=e675]
+                - generic [ref=e676]: Mitchell Admin
+            - cell [ref=e677] [cursor=pointer]
+            - cell "Show activities" [ref=e678] [cursor=pointer]:
+              - button "Show activities" [ref=e680]:
+                - img [ref=e681]: 
+            - cell [ref=e682] [cursor=pointer]
+            - cell "$ 7,435.33" [ref=e683] [cursor=pointer]:
+              - generic [ref=e684]: $ 7,435.33
+            - cell "Purchase Order" [ref=e685] [cursor=pointer]:
+              - generic [ref=e687]: Purchase Order
+            - cell [ref=e688]
+          - row "Priority P00007 Ready Mat My Company (San Francisco) Mitchell Admin Today Check competitorsCheck competitors $ 1,405.88 RFQ" [ref=e689]:
+            - cell [ref=e690]:
+              - checkbox [ref=e692] [cursor=pointer]
+            - cell "Priority" [ref=e693] [cursor=pointer]:
+              - radiogroup "Priority" [ref=e695]:
+                - radio "Urgent" [ref=e696]: 
+            - cell [ref=e697] [cursor=pointer]
+            - cell "P00007" [ref=e698] [cursor=pointer]
+            - cell "Ready Mat" [ref=e699] [cursor=pointer]
+            - cell "My Company (San Francisco)" [ref=e700] [cursor=pointer]
+            - cell "Mitchell Admin" [ref=e701] [cursor=pointer]:
+              - generic [ref=e703]:
+                - img [ref=e705]
+                - generic [ref=e706]: Mitchell Admin
+            - cell "Today" [ref=e707] [cursor=pointer]:
+              - generic "12/24/2025" [ref=e709]: Today
+            - cell "Check competitorsCheck competitors" [ref=e710] [cursor=pointer]:
+              - generic [ref=e711]:
+                - button "Check competitors" [ref=e712]:
+                  - img [ref=e713]: 
+                - text: Check competitors
+            - cell [ref=e714] [cursor=pointer]
+            - cell "$ 1,405.88" [ref=e715] [cursor=pointer]:
+              - generic [ref=e716]: $ 1,405.88
+            - cell "RFQ" [ref=e717] [cursor=pointer]:
+              - generic [ref=e719]: RFQ
+            - cell [ref=e720]
+          - row "Priority P00006 Wood Corner My Company (San Francisco) Mitchell Admin Today Check optional productsCheck optional products $ 1,535.25 RFQ" [ref=e721]:
+            - cell [ref=e722]:
+              - checkbox [ref=e724] [cursor=pointer]
+            - cell "Priority" [ref=e725] [cursor=pointer]:
+              - radiogroup "Priority" [ref=e727]:
+                - radio "Urgent" [ref=e728]: 
+            - cell [ref=e729] [cursor=pointer]
+            - cell "P00006" [ref=e730] [cursor=pointer]
+            - cell "Wood Corner" [ref=e731] [cursor=pointer]
+            - cell "My Company (San Francisco)" [ref=e732] [cursor=pointer]
+            - cell "Mitchell Admin" [ref=e733] [cursor=pointer]:
+              - generic [ref=e735]:
+                - img [ref=e737]
+                - generic [ref=e738]: Mitchell Admin
+            - cell "Today" [ref=e739] [cursor=pointer]:
+              - generic "12/24/2025" [ref=e741]: Today
+            - cell "Check optional productsCheck optional products" [ref=e742] [cursor=pointer]:
+              - generic [ref=e743]:
+                - button "Check optional products" [ref=e744]:
+                  - img [ref=e745]: 
+                - text: Check optional products
+            - cell [ref=e746] [cursor=pointer]
+            - cell "$ 1,535.25" [ref=e747] [cursor=pointer]:
+              - generic [ref=e748]: $ 1,535.25
+            - cell "RFQ" [ref=e749] [cursor=pointer]:
+              - generic [ref=e751]: RFQ
+            - cell [ref=e752]
+          - row "Priority P00005 Deco Addict My Company (San Francisco) Mitchell Admin Today Get approvalGet approval $ 9,956.70 RFQ" [ref=e753]:
+            - cell [ref=e754]:
+              - checkbox [ref=e756] [cursor=pointer]
+            - cell "Priority" [ref=e757] [cursor=pointer]:
+              - radiogroup "Priority" [ref=e759]:
+                - radio "Urgent" [ref=e760]: 
+            - cell [ref=e761] [cursor=pointer]
+            - cell "P00005" [ref=e762] [cursor=pointer]
+            - cell "Deco Addict" [ref=e763] [cursor=pointer]
+            - cell "My Company (San Francisco)" [ref=e764] [cursor=pointer]
+            - cell "Mitchell Admin" [ref=e765] [cursor=pointer]:
+              - generic [ref=e767]:
+                - img [ref=e769]
+                - generic [ref=e770]: Mitchell Admin
+            - cell "Today" [ref=e771] [cursor=pointer]:
+              - generic "12/24/2025" [ref=e773]: Today
+            - cell "Get approvalGet approval" [ref=e774] [cursor=pointer]:
+              - generic [ref=e775]:
+                - button "Get approval" [ref=e776]:
+                  - img [ref=e777]: 
+                - text: Get approval
+            - cell [ref=e778] [cursor=pointer]
+            - cell "$ 9,956.70" [ref=e779] [cursor=pointer]:
+              - generic [ref=e780]: $ 9,956.70
+            - cell "RFQ" [ref=e781] [cursor=pointer]:
+              - generic [ref=e783]: RFQ
+            - cell [ref=e784]
+          - row "Priority P00004 Ready Mat My Company (San Francisco) Mitchell Admin Today Show activities $ 16,747.45 RFQ Sent" [ref=e785]:
+            - cell [ref=e786]:
+              - checkbox [ref=e788] [cursor=pointer]
+            - cell "Priority" [ref=e789] [cursor=pointer]:
+              - radiogroup "Priority" [ref=e791]:
+                - radio "Urgent" [ref=e792]: 
+            - cell [ref=e793] [cursor=pointer]
+            - cell "P00004" [ref=e794] [cursor=pointer]
+            - cell "Ready Mat" [ref=e795] [cursor=pointer]
+            - cell "My Company (San Francisco)" [ref=e796] [cursor=pointer]
+            - cell "Mitchell Admin" [ref=e797] [cursor=pointer]:
+              - generic [ref=e799]:
+                - img [ref=e801]
+                - generic [ref=e802]: Mitchell Admin
+            - cell "Today" [ref=e803] [cursor=pointer]:
+              - generic "12/24/2025" [ref=e805]: Today
+            - cell "Show activities" [ref=e806] [cursor=pointer]:
+              - button "Show activities" [ref=e808]:
+                - img [ref=e809]: 
+            - cell [ref=e810] [cursor=pointer]
+            - cell "$ 16,747.45" [ref=e811] [cursor=pointer]:
+              - generic [ref=e812]: $ 16,747.45
+            - cell "RFQ Sent" [ref=e813] [cursor=pointer]:
+              - generic [ref=e815]: RFQ Sent
+            - cell [ref=e816]
+          - row "Priority P00003 Azure Interior My Company (San Francisco) Mitchell Admin Today Show activities $ 293.25 RFQ" [ref=e817]:
+            - cell [ref=e818]:
+              - checkbox [ref=e820] [cursor=pointer]
+            - cell "Priority" [ref=e821] [cursor=pointer]:
+              - radiogroup "Priority" [ref=e823]:
+                - radio "Urgent" [ref=e824]: 
+            - cell [ref=e825] [cursor=pointer]
+            - cell "P00003" [ref=e826] [cursor=pointer]
+            - cell "Azure Interior" [ref=e827] [cursor=pointer]
+            - cell "My Company (San Francisco)" [ref=e828] [cursor=pointer]
+            - cell "Mitchell Admin" [ref=e829] [cursor=pointer]:
+              - generic [ref=e831]:
+                - img [ref=e833]
+                - generic [ref=e834]: Mitchell Admin
+            - cell "Today" [ref=e835] [cursor=pointer]:
+              - generic "12/24/2025" [ref=e837]: Today
+            - cell "Show activities" [ref=e838] [cursor=pointer]:
+              - button "Show activities" [ref=e840]:
+                - img [ref=e841]: 
+            - cell [ref=e842] [cursor=pointer]
+            - cell "$ 293.25" [ref=e843] [cursor=pointer]:
+              - generic [ref=e844]: $ 293.25
+            - cell "RFQ" [ref=e845] [cursor=pointer]:
+              - generic [ref=e847]: RFQ
+            - cell [ref=e848]
+          - row "Priority P00002 Gemini Furniture My Company (San Francisco) Mitchell Admin Today Send specificationsSend specifications $ 3,559.25 RFQ" [ref=e849]:
+            - cell [ref=e850]:
+              - checkbox [ref=e852] [cursor=pointer]
+            - cell "Priority" [ref=e853] [cursor=pointer]:
+              - radiogroup "Priority" [ref=e855]:
+                - radio "Urgent" [ref=e856]: 
+            - cell [ref=e857] [cursor=pointer]
+            - cell "P00002" [ref=e858] [cursor=pointer]
+            - cell "Gemini Furniture" [ref=e859] [cursor=pointer]
+            - cell "My Company (San Francisco)" [ref=e860] [cursor=pointer]
+            - cell "Mitchell Admin" [ref=e861] [cursor=pointer]:
+              - generic [ref=e863]:
+                - img [ref=e865]
+                - generic [ref=e866]: Mitchell Admin
+            - cell "Today" [ref=e867] [cursor=pointer]:
+              - generic "12/24/2025" [ref=e869]: Today
+            - cell "Send specificationsSend specifications" [ref=e870] [cursor=pointer]:
+              - generic [ref=e871]:
+                - button "Send specifications" [ref=e872]:
+                  - img [ref=e873]: 
+                - text: Send specifications
+            - cell [ref=e874] [cursor=pointer]
+            - cell "$ 3,559.25" [ref=e875] [cursor=pointer]:
+              - generic [ref=e876]: $ 3,559.25
+            - cell "RFQ" [ref=e877] [cursor=pointer]:
+              - generic [ref=e879]: RFQ
+            - cell [ref=e880]
+          - row "Priority P00001 Wood Corner My Company (San Francisco) Mitchell Admin Today Show activities $ 3,480.48 RFQ" [ref=e881]:
+            - cell [ref=e882]:
+              - checkbox [ref=e884] [cursor=pointer]
+            - cell "Priority" [ref=e885] [cursor=pointer]:
+              - radiogroup "Priority" [ref=e887]:
+                - radio "Urgent" [ref=e888]: 
+            - cell [ref=e889] [cursor=pointer]
+            - cell "P00001" [ref=e890] [cursor=pointer]
+            - cell "Wood Corner" [ref=e891] [cursor=pointer]
+            - cell "My Company (San Francisco)" [ref=e892] [cursor=pointer]
+            - cell "Mitchell Admin" [ref=e893] [cursor=pointer]:
+              - generic [ref=e895]:
+                - img [ref=e897]
+                - generic [ref=e898]: Mitchell Admin
+            - cell "Today" [ref=e899] [cursor=pointer]:
+              - generic "12/24/2025" [ref=e901]: Today
+            - cell "Show activities" [ref=e902] [cursor=pointer]:
+              - button "Show activities" [ref=e904]:
+                - img [ref=e905]: 
+            - cell [ref=e906] [cursor=pointer]
+            - cell "$ 3,480.48" [ref=e907] [cursor=pointer]:
+              - generic [ref=e908]: $ 3,480.48
+            - cell "RFQ" [ref=e909] [cursor=pointer]:
+              - generic [ref=e911]: RFQ
+            - cell [ref=e912]
+        - rowgroup [ref=e913]:
+          - row "$ 94,102.24" [ref=e914]:
+            - cell [ref=e915]
+            - cell [ref=e916]
+            - cell [ref=e917]
+            - cell [ref=e918]
+            - cell [ref=e919]
+            - cell [ref=e920]
+            - cell [ref=e921]
+            - cell [ref=e922]
+            - cell [ref=e923]
+            - cell [ref=e924]
+            - cell "$ 94,102.24" [ref=e925]
+            - cell [ref=e926]
+            - cell [ref=e927]
+  - generic:
+    - generic:
+      - paragraph: Press esc to exit full screen
+```
