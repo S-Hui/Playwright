@@ -15,8 +15,8 @@ export class PurchaseOrder extends CommonActions {
   }
 
   async createRFQ(vendor:string, currency: string): Promise<string>{
-    await this.page.getByRole('option', { name: 'Purchase' }).click();
-    await this.page.getByRole('button', { name: 'New' }).click();
+    await this.selectModule('Purchase');
+    await this.createNewRecord();
     await this.page.getByRole('combobox', { name: 'Name, TIN, Email, or Reference' }).click();
     await this.page.getByRole('combobox', { name: 'Name, TIN, Email, or Reference' }).fill(vendor);
     await this.page.getByRole('option', { name: vendor }).click();

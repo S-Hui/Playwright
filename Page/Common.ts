@@ -7,6 +7,13 @@ export class CommonActions {
     this.page = page;
   }
 
+  async selectModule(moduleName: string){
+    await this.page.getByRole('option', {name: moduleName}).click();
+  }
+
+  async createNewRecord(){
+    await this.page.getByRole('button', { name: 'New' }).click();
+  }
 
 
   // About addAWhat:
