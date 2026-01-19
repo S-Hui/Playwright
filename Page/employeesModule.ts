@@ -1,4 +1,4 @@
-import { Page } from '@playwright/test';
+import { Page, expect } from '@playwright/test';
 import {CommonActions} from './Common';
 
 export class employees extends CommonActions {
@@ -6,85 +6,41 @@ export class employees extends CommonActions {
     super(page);
   }
 
+  async toEmployees(){
+    await this.selectModule('Employees');
+  }
 
-
-  async createEmployee(organization: string, email: string, phone){
-    await this.selectModule('CRM');
-    await this.createRecord();
-    const completeOrganizationField = this.page.locator("o_wrap_field d-flex d-sm-contents flex-column mb-3 mb-sm-0").first().getByRole('combobox')
-    await completeOrganizationField.click();
-    await completeOrganizationField.fill(organization);
-    await page.getByRole('textbox', { name: 'Email' }).click();
-    await page.getByRole('textbox', { name: 'Email' }).fill(email);
-    await page.getByRole('textbox', { name: 'Phone' }).click();
-    await page.getByRole('textbox', { name: 'Phone' }).fill(phone);
-    await page.getByRole('button', { name: 'Add', exact: true }).click();
-     await page.getByRole('textbox', { name: 'Employee\'s Name' }).click();
-  await page.getByRole('textbox', { name: 'Employee\'s Name' }).fill('Annie');
-  await page.getByRole('textbox', { name: 'Job Position' }).click();
-  await page.getByRole('textbox', { name: 'Job Position' }).fill('ERP Consultant');
-  await page.getByRole('combobox', { name: 'Tags' }).click();
-  await page.getByRole('combobox', { name: 'Tags' }).fill('Consultant');
-  await expect(page.getByRole('option', { name: 'Create "Consultant"' })).toBeVisible();
-
-  await page.getByRole('option', { name: 'Consultant', exact: true }).click();
-  await expect(page.getByRole('link', { name: 'Delete' })).toBeVisible();
-
-  await page.getByRole('combobox', { name: 'Department' }).click();
-  await page.getByRole('combobox', { name: 'Department' }).fill('IT');
-  await page.getByRole('option', { name: 'Create "IT"' }).click();
-  await expect(page.getByRole('button', { name: 'Internal link' })).toBeVisible();
-
-  await page.getByRole('combobox', { name: 'Job Position' }).click();
-  await page.getByRole('combobox', { name: 'Job Position' }).fill('Consultant');
-  await expect(page.getByRole('option', { name: 'Create "Consultant"' })).toBeVisible();
-
-  await page.getByRole('option', { name: 'Consultant', exact: true }).click();
-  await expect(page.getByRole('heading', { name: 'Consultant' })).toBeVisible();
-
-  await page.getByRole('combobox', { name: 'Manager' }).click();
-  await page.getByRole('combobox', { name: 'Manager' }).fill('Abrigal');
-  await page.getByRole('option', { name: 'Create "Abrigal"' }).click();
-  await expect(page.getByRole('button', { name: ' Org Chart' })).toBeVisible();
-
-  await page.getByRole('tab', { name: 'Work Information' }).click();
-  await expect(page.getByRole('combobox', { name: 'Work Address' })).toBeVisible();
-
-  await page.getByRole('combobox', { name: 'Expense?' }).click();
-  await page.getByRole('combobox', { name: 'Expense?' }).fill('Mitchell');
-  await expect(page.getByRole('option', { name: 'Create "Mitchell"' })).toBeVisible();
-
-  await page.getByRole('option', { name: 'Mitchell Admin' }).click();
-  await expect(page.getByRole('button', { name: 'Internal link' })).toBeVisible();
-
-  await page.locator('.o_inner_group.grid.hide-group-if-empty > div:nth-child(3) > .o_cell.o_wrap_input > .o_field_widget > .d-flex').click();
-  await expect(page.getByRole('option', { name: 'Mitchell Admin' })).toBeVisible();
-
-  await page.locator('.o_inner_group.grid.hide-group-if-empty > div:nth-child(3) > .o_cell.o_wrap_input > .o_field_widget > .d-flex').click();
-  await page.getByRole('combobox', { name: 'Time Off?' }).click();
-  await page.getByRole('combobox', { name: 'Time Off?' }).fill('Mitchell Admin');
-  await expect(page.getByRole('option', { name: 'Create "Mitchell Admin"' })).toBeVisible();
-
-  await page.getByRole('option', { name: 'Mitchell Admin', exact: true }).click();
-  await expect(page.getByRole('button', { name: 'Internal link' })).toBeVisible();
-
-  await page.getByRole('tab', { name: 'Private Information' }).click();
-  await expect(page.getByRole('textbox', { name: 'Private Address' })).toBeVisible();
-
-  await page.getByRole('tab', { name: 'HR Settings' }).click();
-  await expect(page.getByLabel('Employee Type?')).toBeVisible();
-
-  await page.getByRole('combobox', { name: 'Related User?' }).click();
-  await page.getByRole('combobox', { name: 'Related User?' }).fill('Mitche');
-  await expect(page.getByRole('option', { name: 'Create "Mitche"' })).toBeVisible();
-
-  await page.getByRole('option', { name: 'Mitchell Admin' }).click();
-  await expect(page.getByRole('button', { name: ' 0 / 6 Courses' })).toBeVisible();
-
-  await page.getByRole('button', { name: 'Save manually' }).click();
-  await expect(page.getByText('Stay hereDiscard changesOh')).toBeVisible();
-  await expect(page.getByRole('heading', { name: 'Oh snap!' })).toBeVisible();
-  await page.getByText('Discard changes').click();
+  async createEmployee(name: string, position:string, department:string, manager: string, tags: string[], expenseApprover: string, timeoffApprover: string, email: string, phone: string, emergencyContact: string, emergencyPhone: string, employeeType: string, odooUser: string){
+    await this.createNewRecord();
+    await this.page.getByRole('textbox', { name: 'Employee\'s Name' }).click();
+    await this.page.getByRole('textbox', { name: 'Employee\'s Name' }).fill(name);
+    await this.page.getByRole('textbox', { name: 'Job Position' }).click();
+    await this.page.getByRole('textbox', { name: 'Job Position' }).fill(position);
+    for (const tag of tags){
+      this.clickAndCompleteCombobox('Tags',tag);
+    }
+    this.clickAndCompleteCombobox('Department', department);
+    this.clickAndCompleteCombobox('Job Position', position);
+    this.clickAndCompleteCombobox('Manager', manager);
+    await this.page.getByRole('tab', { name: 'Work Information' }).click();
+    await expect(this.page.getByRole('textbox', { name: 'APPROVERS' })).toBeVisible();
+    this.clickAndCompleteCombobox('Expense?', expenseApprover)
+    this.clickAndCompleteCombobox('Time Off?', timeoffApprover)
+    await this.page.getByRole('tab', { name: 'Private Information' }).click();
+    await expect(this.page.getByRole('textbox', { name: 'PRIVATE CONTACT' })).toBeVisible();
+    await this.page.getByRole('textbox', { name: 'Email', exact: true }).click();
+    await this.page.getByRole('textbox', { name: 'Email', exact: true }).fill(email);
+    await this.page.getByRole('textbox', { name: 'Phone', exact: true }).click();
+    await this.page.getByRole('textbox', { name: 'Phone', exact: true }).fill(phone);
+    await this.page.getByRole('textbox', { name: 'Contact Name' }).click();
+    await this.page.getByRole('textbox', { name: 'Contact Name' }).fill(emergencyContact);
+    await this.page.getByRole('textbox', { name: 'Contact Phone' }).click();
+    await this.page.getByRole('textbox', { name: 'Contact Phone' }).fill(emergencyPhone);
+    await this.page.getByRole('tab', { name: 'HR Settings' }).click();
+    await expect(this.page.getByRole('textbox', { name: 'STATUS' })).toBeVisible();
+    await this.page.getByLabel('Employee Type?').selectOption(employeeType);
+    this.clickAndCompleteCombobox('Related User?', odooUser)
+    await this.page.getByRole('button', { name: 'Save manually' }).click();
     }
 
 }

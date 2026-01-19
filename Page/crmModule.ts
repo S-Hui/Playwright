@@ -6,19 +6,21 @@ export class crm extends CommonActions {
     super(page);
   }
 
-
-
-  async createOpportunity(organization: string, email: string, phone){
+  async toCRM(){
     await this.selectModule('CRM');
-    await this.createRecord();
+  }
+
+  async createOpportunity(organization: string, email: string, phone: string){
+
+    await this.createNewRecord();
     const completeOrganizationField = this.page.locator("o_wrap_field d-flex d-sm-contents flex-column mb-3 mb-sm-0").first().getByRole('combobox')
     await completeOrganizationField.click();
     await completeOrganizationField.fill(organization);
-    await page.getByRole('textbox', { name: 'Email' }).click();
-    await page.getByRole('textbox', { name: 'Email' }).fill(email);
-    await page.getByRole('textbox', { name: 'Phone' }).click();
-    await page.getByRole('textbox', { name: 'Phone' }).fill(phone);
-    await page.getByRole('button', { name: 'Add', exact: true }).click();
+    await this.page.getByRole('textbox', { name: 'Email' }).click();
+    await this.page.getByRole('textbox', { name: 'Email' }).fill(email);
+    await this.page.getByRole('textbox', { name: 'Phone' }).click();
+    await this.page.getByRole('textbox', { name: 'Phone' }).fill(phone);
+    await this.page.getByRole('button', { name: 'Add', exact: true }).click();
     }
 
 }

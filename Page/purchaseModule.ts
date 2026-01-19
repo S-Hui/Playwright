@@ -14,12 +14,13 @@ export class PurchaseOrder extends CommonActions {
     super(page);
   }
 
-  async createRFQ(vendor:string, currency: string): Promise<string>{
+  async toPurchaseModule(){
     await this.selectModule('Purchase');
+  }
+
+  async createRFQ(vendor:string, currency: string): Promise<string>{
     await this.createNewRecord();
-    await this.page.getByRole('combobox', { name: 'Name, TIN, Email, or Reference' }).click();
-    await this.page.getByRole('combobox', { name: 'Name, TIN, Email, or Reference' }).fill(vendor);
-    await this.page.getByRole('option', { name: vendor }).click();
+    await this.clickAndCompleteCombobox('Name, TIN, Email, or Reference', vendor);
     await this.page.getByRole('combobox', { name: 'Currency' }).click();
     await this.page.getByRole('combobox', { name: 'Currency' }).fill(currency);
     await this.page.getByRole('option', { name: currency }).click();
@@ -36,7 +37,7 @@ export class PurchaseOrder extends CommonActions {
 
   async addPOLineItems(productList: ProductVariant[]){
     for (const product of productList){
-      const newRow = await this.addNewRow("product");
+      const newRow = await this.addNewRow("tr.o_data_row", "product", ["o_selected_row"]);
       await this.fillNewRowCell(newRow, "product_template_id", product.variantName);
       await this.fillNewRowCell(newRow, "product_qty", product.variantQuantity);
       await this.fillNewRowCell(newRow, "price_unit", product.variantPrice)
