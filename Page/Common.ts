@@ -6,6 +6,13 @@ export type filterConditions = {
     value?: string;
 }
 
+export type ProductVariant = {
+    variantName: string;
+    variantQuantity: string;
+    variantPrice: string;
+    tax?: string
+  }
+
 export class CommonActions {
   protected page: Page;
 
@@ -21,6 +28,12 @@ export class CommonActions {
     await this.page.getByRole('button', { name: 'New' }).click();
   }
 
+  async locateRow(rowLocator:string, textWithinRowTag: string, textWithinRow: string):Promise<Locator>{
+    const row = this.page.locator(rowLocator).filter({
+      has: this.page.locator(textWithinRowTag,{ hasText: textWithinRow})
+    })
+    return row
+  }
 
   // About addAWhat:
   // If the button says Add a line, addAWhat should be "Line"
@@ -48,7 +61,10 @@ export class CommonActions {
     await this.page.getByRole('searchbox', { name: 'Search...' }).click();
     await this.page.getByRole('searchbox', { name: 'Search...' }).fill(data);
     await this.page.getByRole('searchbox', { name: 'Search...' }).press('Enter');
+    await this.page.getByRole('cell', { name: data }).click();
+
   }
+
 
   async fillFilterRows(row: Locator, column:string, operator:string, value: string = ""){
     await row.locator('.o_tree_editor_editor').first().click();

@@ -1,13 +1,7 @@
 import { Page } from '@playwright/test';
-import {CommonActions} from './Common';
+import {CommonActions, ProductVariant} from './Common';
 
 // Example data to provide
-
-export type ProductVariant = {
-    variantName: string;
-    variantQuantity: string;
-    variantPrice: string;
-  }
 
 export class PurchaseOrder extends CommonActions {
   constructor(page: Page){
