@@ -20,6 +20,10 @@ export class CommonActions {
     this.page = page;
   }
 
+  async save(){
+    await this.page.getByRole('button', { name: 'Save manually' }).click();
+  }
+
   async selectModule(moduleName: string){
     await this.page.getByRole('option', {name: moduleName}).click();
   }
@@ -46,6 +50,7 @@ export class CommonActions {
       const newRow = this.page.locator([rowLocator, ...(newRowLocator ?? [])].join(".")).last();
     return newRow
   }
+
 
   async fillNewRowCell(newRow: Locator, column: string, data: string){
     const cell = newRow.locator(`td[name="${column}"]`).locator('input, textarea').first()
@@ -87,7 +92,7 @@ export class CommonActions {
       }
       const rowLocator = this.page.locator('.o_tree_editor_node').last()
       const condition = conditions[i]
-      this.fillFilterRows(rowLocator, condition.column, condition.operator, condition.value)
+      await this.fillFilterRows(rowLocator, condition.column, condition.operator, condition.value)
     }
     if (logic == "all"){
       await this.page.getByRole('button', { name: 'any', exact: true }).click();
@@ -115,4 +120,11 @@ export class CommonActions {
     await expect(this.page.getByRole('menuitem', { name: menuItem })).toBeVisible();
     await this.page.getByRole('menuitem', { name: menuItem }).click();
 };
+
+  async deleteTag(tag: string){
+    const theTag = this.page.locator(".o-tag").filter({
+      has: this.page.locator(".o_tag_badge_text",{ hasText: tag})
+    }).first();
+    await theTag.locator('[title = "delete"]').click();
+  }
 }

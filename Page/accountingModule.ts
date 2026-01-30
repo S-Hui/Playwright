@@ -1,4 +1,4 @@
-import { Page, expect } from '@playwright/test';
+import { Page, expect, Locator } from '@playwright/test';
 import {CommonActions, ProductVariant} from './Common';
 
 export type Invoice = {
@@ -21,10 +21,13 @@ export class accounting extends CommonActions {
     await this.searchRecord(invoice["Invoice"])  
   }
 
-   async updateInvoiceLineItems(invoice: Invoice){
+  async locateInvoiceLine(text: string): Promise<Locator>{
+    return await this.locateRow("tr.o_data_row", "span",text)
+  }
+  async updateInvoiceLineItems(invoice: Invoice){
     for (const lineItem of invoice.LineItems){
         if (await this.page.locator("table", {hasText: lineItem.variantName}).isVisible()){
-            const theRow = await this.locateRow("tr.o_data_row", "span", lineItem.variantName)
+            const theRow = await this.locateInvoiceLine(lineItem.variantName)
             await this.fillNewRowCell(theRow, "quantity", lineItem.variantQuantity);
             await this.fillNewRowCell(theRow, "price_unit", lineItem.variantPrice)
         }else{
@@ -38,4 +41,32 @@ export class accounting extends CommonActions {
     }
 
 }
+
+async removeLineItem(sku: string){
+  const theRow = await this.locateInvoiceLine(sku);
+  await theRow.getByRole("button", { name: "delete"}).click();
+  await this.save();
+
+}
+
+async updatePrice(sku: string, price: string){
+  const theRow = await this.locateInvoiceLine(sku);
+  await this.fillNewRowCell(theRow, "price_unit", price)
+  await this.save();
+}
+
+async updateQuantity(sku:string , quantity: string){
+  const theRow = await this.locateInvoiceLine(sku);
+  await this.fillNewRowCell(theRow, "quantity", quantity);
+  await this.save();
+
+  
+}
+
+async deleteTaxTag(tag:string){
+  await this.deleteTag(tag)
+  await this.save()
+
+}
+
 }
